@@ -255,5 +255,21 @@ namespace API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
+        [HttpDelete("{reviewId}")]
+        public async Task<IActionResult> DeleteReview([FromRoute] Guid reviewId)
+        {
+            try
+            {
+                var review = await dbContext.Reviews.FirstOrDefaultAsync(r => r.Id == reviewId);
+                dbContext.Reviews.Remove(review);
+                await dbContext.SaveChangesAsync();
+                return StatusCode(StatusCodes.Status200OK, review.Id);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
     }
 }

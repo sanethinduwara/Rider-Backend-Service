@@ -41,7 +41,8 @@ namespace API.Controllers
                 MainImage = place.Image.Url,
                 Name = place.Name,
                 Description = place.LongDescription,
-                Liked = dbContext.Favourits?.Any(f => f.PlaceId == placeId && f.UserId == userId) ?? false
+                Liked = dbContext.Favourits?.Any(f => f.PlaceId == placeId && f.UserId == userId) ?? false,
+                Rating = Calculate(dbContext.Reviews.Where(r => r.PlaceId == place.Id).ToList()),
             };
 
             var images = await dbContext.Reviews.Include(r => r.Image).Where(r => r.PlaceId == placeId).Select(e => e.Image.Url).ToListAsync();
@@ -168,6 +169,17 @@ namespace API.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,ex.Message);
             }
+        }
+
+        private int Calculate(List<Review> reviews)
+        {
+            var total = 0;
+            reviews.ForEach(r =>
+            {
+                total += (int)r.Rating;
+            }
+                );
+            return reviews.Count != 0 ? (int)(total / reviews.Count) : 0;
         }
 
     }

@@ -145,5 +145,65 @@ namespace API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
+
+        [HttpGet("{userId}/visits")]
+        public async Task<IActionResult> GetVisits([FromRoute] Guid userId)
+        {
+            if (userId == Guid.Empty)
+            {
+                return BadRequest("Invalid Data");
+            }
+
+            try
+            {
+                var user = await dbContext.Users.FirstOrDefaultAsync(u => u.Id == userId);
+
+                if (user == null)
+                {
+                    return BadRequest("Invalid Data");
+                }
+
+                var visits = dbContext.Visits
+                    .Include(f => f.Place).ThenInclude(p => p.Image)
+                    .Where(f => f.UserId == userId).ToList();
+
+                return Json(visits);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [HttpGet("{userId}/redeem-points")]
+        public async Task<IActionResult> RedeemPoints([FromRoute] Guid userId, [FromBody] PaymentDTO payment)
+        {
+            if (userId == Guid.Empty)
+            {
+                return BadRequest("Invalid Data");
+            }
+
+            try
+            {
+                var user = await dbContext.Users.FirstOrDefaultAsync(u => u.Id == userId);
+
+                if (user == null)
+                {
+                    return BadRequest("Invalid Data");
+                }
+
+                var score = user.Score - payment.Points;
+                user.Score = score > 0 ? score: 0;
+
+                dbContext.Update(user);
+                dbContext.SaveChanges();
+
+                return Json(true);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
     }
 }

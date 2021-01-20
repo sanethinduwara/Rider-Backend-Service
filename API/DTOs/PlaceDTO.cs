@@ -19,5 +19,7 @@ namespace API.DTOs
         public bool Liked { get; set; }
 
         public int Rating { get; set; }
+
+        public bool Visited { get; set; }
     }
 }

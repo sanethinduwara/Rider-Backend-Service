@@ -200,6 +200,31 @@ namespace API.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Visits",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(nullable: false),
+                    PlaceId = table.Column<Guid>(nullable: false),
+                    UserId = table.Column<Guid>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Visits", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Visits_Places_PlaceId",
+                        column: x => x.PlaceId,
+                        principalTable: "Places",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Visits_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "QuizQuestions",
                 columns: table => new
                 {
@@ -491,6 +516,16 @@ namespace API.Migrations
                 name: "IX_Users_ProfilePictureId",
                 table: "Users",
                 column: "ProfilePictureId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Visits_PlaceId",
+                table: "Visits",
+                column: "PlaceId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Visits_UserId",
+                table: "Visits",
+                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -518,6 +553,9 @@ namespace API.Migrations
 
             migrationBuilder.DropTable(
                 name: "Trains");
+
+            migrationBuilder.DropTable(
+                name: "Visits");
 
             migrationBuilder.DropTable(
                 name: "Answers");

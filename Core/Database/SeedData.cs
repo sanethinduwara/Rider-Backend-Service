@@ -55,52 +55,104 @@ namespace Core.Database
                 new Place
                 {
                     Id = Guid.Parse("94EAB6AD-8062-4CE2-A982-3CA495652363"),
-                    Name ="Tower Bridge",
-                    ShortDescription ="This is the short description for the Tower Bridge",
-                    LongDescription ="Tower Bridge is a combined bascule and suspension bridge in London, built between 1886 and 1894. The bridge crosses the River Thames close to the Tower of London and has become an iconic symbol of London. As a result, it is sometimes confused with London Bridge, about half a mile (0.8 km) upstream. Tower Bridge is one of five London bridges owned and maintained by the Bridge House Estates, a charitable trust overseen by the City of London Corporation. It is the only one of the trust's bridges not to connect the City of London directly to the Southwark bank, as its northern landfall is in Tower Hamlets.",
+                    Name ="Wells Cathedral",
+                    ShortDescription ="Climb the spiral staircase to walk in the footsteps of Cathedral masons tours...",
+                    LongDescription ="Wells Cathedral is a combined bascule and suspension bridge in London, built between 1886 and 1894. The bridge crosses the River Thames close to the Tower of London and has become an iconic symbol of London. As a result, it is sometimes confused with London Bridge, about half a mile (0.8 km) upstream. Tower Bridge is one of five London bridges owned and maintained by the Bridge House Estates, a charitable trust overseen by the City of London Corporation. It is the only one of the trust's bridges not to connect the City of London directly to the Southwark bank, as its northern landfall is in Tower Hamlets.",
                     Image = new Image
                     {
                         Id = Guid.Parse("D00D120A-D563-442F-9ECE-358ED0B88ED7"),
-                        Url = "http://upload.wikimedia.org/wikipedia/commons/6/63/Tower_Bridge_from_Shad_Thames.jpg"
+                        Url = "https://i.ibb.co/q5qFy4S/exterior-in-late-evening.jpg"
                     }
 
                 },
                 new Place
                 {
                     Id = Guid.Parse("D4A1AFB0-1968-41FD-9646-AEFFCB21E736"),
-                    Name ="Big Ben",
-                    ShortDescription ="This is the short description for the Big Ben",
-                    LongDescription ="Big Ben is the nickname for the Great Bell of the striking clock at the north end of the Palace of Westminster in London[1] and is usually extended to refer to both the clock and the clock tower.[2][3] The official Name of the tower in which Big Ben is located was originally the Clock Tower, but it was renamed Elizabeth Tower in 2012 to mark the Diamond Jubilee of Elizabeth II.The tower was designed by Augustus Pugin in a neo-Gothic style. When completed in 1859, its clock was the largest and most accurate four-faced striking and chiming clock in the world.[4] The tower stands 315 feet (96 m) tall, and the climb from ground level to the belfry is 334 steps. Its base is square, measuring 39 feet (12 m) on each side. Dials of the clock are 23 feet (7.0 m) in diameter. On 31 May 2009, celebrations were held to mark the tower's 150th anniversary.",
+                    Name ="Coleton Fishare",
+                    ShortDescription ="A property consisting of a garden and a house in the Arts",
+                    LongDescription ="Coleton Fishare is the nickname for the Great Bell of the striking clock at the north end of the Palace of Westminster in London[1] and is usually extended to refer to both the clock and the clock tower.[2][3] The official Name of the tower in which Big Ben is located was originally the Clock Tower, but it was renamed Elizabeth Tower in 2012 to mark the Diamond Jubilee of Elizabeth II.The tower was designed by Augustus Pugin in a neo-Gothic style. When completed in 1859, its clock was the largest and most accurate four-faced striking and chiming clock in the world.[4] The tower stands 315 feet (96 m) tall, and the climb from ground level to the belfry is 334 steps. Its base is square, measuring 39 feet (12 m) on each side. Dials of the clock are 23 feet (7.0 m) in diameter. On 31 May 2009, celebrations were held to mark the tower's 150th anniversary.",
                     Image = new Image
                     {
                         Id = Guid.Parse("E3C7F467-9115-41BD-BA2B-10EC79609D55"),
-                        Url = "http://images.theconversation.com/files/182776/original/file-20170821-27160-1kwep4u.jpg"
+                        Url = "https://i.ibb.co/kgYGqtc/coleton-fishacre.jpg"
                     }
                 },
                 new Place
                 {
                     Id = Guid.Parse("CA6FE982-3379-4B47-93ED-4923FF893ECD"),
-                    Name ="Coca-Cola London Eye",
-                    ShortDescription ="This is the short description for the Coca-Cola London Eye",
-                    LongDescription ="Tower Bridge is a combined bascule and suspension bridge in London, built between 1886 and 1894. The bridge crosses the River Thames close to the Tower of London and has become an iconic symbol of London. As a result, it is sometimes confused with London Bridge, about half a mile (0.8 km) upstream. Tower Bridge is one of five London bridges owned and maintained by the Bridge House Estates, a charitable trust overseen by the City of London Corporation. It is the only one of the trust's bridges not to connect the City of London directly to the Southwark bank, as its northern landfall is in Tower Hamlets.",
+                    Name ="Sherborne Abbey",
+                    ShortDescription ="A Church of England church in Sherborne in the English county...",
+                    LongDescription ="Sherborne Abbey is a combined bascule and suspension bridge in London, built between 1886 and 1894. The bridge crosses the River Thames close to the Tower of London and has become an iconic symbol of London. As a result, it is sometimes confused with London Bridge, about half a mile (0.8 km) upstream. Tower Bridge is one of five London bridges owned and maintained by the Bridge House Estates, a charitable trust overseen by the City of London Corporation. It is the only one of the trust's bridges not to connect the City of London directly to the Southwark bank, as its northern landfall is in Tower Hamlets.",
                     Image = new Image
                     {
                         Id = Guid.Parse("C6136239-8852-419B-8399-1D88749B880D"),
-                        Url = "http://upload.wikimedia.org/wikipedia/commons/d/d6/London-Eye-2009.JPG"
+                        Url = "https://i.ibb.co/k82gBf6/the-abbey.jpg"
                     }
                 },
                 new Place
                 {
                     Id = Guid.Parse("55B399EA-8264-4A18-AACE-3ED413B715EA"),
-                    Name ="Tower of London",
-                    ShortDescription ="This is the short description for the Tower of London",
-                    LongDescription ="Tower Bridge is a combined bascule and suspension bridge in London, built between 1886 and 1894. The bridge crosses the River Thames close to the Tower of London and has become an iconic symbol of London. As a result, it is sometimes confused with London Bridge, about half a mile (0.8 km) upstream. Tower Bridge is one of five London bridges owned and maintained by the Bridge House Estates, a charitable trust overseen by the City of London Corporation. It is the only one of the trust's bridges not to connect the City of London directly to the Southwark bank, as its northern landfall is in Tower Hamlets.",
+                    Name ="Nothe Fort",
+                    ShortDescription ="This 19th century Fort includes a museum highlighting coastal...",
+                    LongDescription ="North Fort is a combined bascule and suspension bridge in London, built between 1886 and 1894. The bridge crosses the River Thames close to the Tower of London and has become an iconic symbol of London. As a result, it is sometimes confused with London Bridge, about half a mile (0.8 km) upstream. Tower Bridge is one of five London bridges owned and maintained by the Bridge House Estates, a charitable trust overseen by the City of London Corporation. It is the only one of the trust's bridges not to connect the City of London directly to the Southwark bank, as its northern landfall is in Tower Hamlets.",
                     Image = new Image
                     {
                         Id = Guid.Parse("D2CC58D2-2554-4CEE-91B3-CAFF50EFF78B"),
-                        Url = "http://lonelyplanetimages.imgix.net/a/g/hi/t/145074adb387be6f8f357d7dc3ae9e3c-tower-of-london.jpg"
+                        Url = "https://i.ibb.co/J7WM5x8/aeriel-view.jpg"
                     }
-                }
+                },
+                new Place
+                {
+                    Id = Guid.Parse("9b4f5735-c83d-493b-8785-5231888e2ba2"),
+                    Name ="The Close",
+                    ShortDescription ="Nice and quiet so you can come and sit for a while away from the bustle of ...",
+                    LongDescription ="Wells Cathedral is a combined bascule and suspension bridge in London, built between 1886 and 1894. The bridge crosses the River Thames close to the Tower of London and has become an iconic symbol of London. As a result, it is sometimes confused with London Bridge, about half a mile (0.8 km) upstream. Tower Bridge is one of five London bridges owned and maintained by the Bridge House Estates, a charitable trust overseen by the City of London Corporation. It is the only one of the trust's bridges not to connect the City of London directly to the Southwark bank, as its northern landfall is in Tower Hamlets.",
+                    Image = new Image
+                    {
+                        Id = Guid.Parse("2385b931-f10f-44d0-a3b3-067b474ab095"),
+                        Url = "https://i.ibb.co/2SVQmdZ/enjoy-the-setting.jpg"
+                    }
+
+                },
+                new Place
+                {
+                    Id = Guid.Parse("874f891c-12f9-4124-8b15-460576a05af5"),
+                    Name ="Dunster Castle",
+                    ShortDescription ="The castle lies on the top of a steep hill called the Tor, and has been fortified",
+                    LongDescription ="Wells Cathedral is a combined bascule and suspension bridge in London, built between 1886 and 1894. The bridge crosses the River Thames close to the Tower of London and has become an iconic symbol of London. As a result, it is sometimes confused with London Bridge, about half a mile (0.8 km) upstream. Tower Bridge is one of five London bridges owned and maintained by the Bridge House Estates, a charitable trust overseen by the City of London Corporation. It is the only one of the trust's bridges not to connect the City of London directly to the Southwark bank, as its northern landfall is in Tower Hamlets.",
+                    Image = new Image
+                    {
+                        Id = Guid.Parse("909949c6-5879-47be-a5d3-1db3c14f217f"),
+                        Url = "https://i.ibb.co/nccLT6h/the-castle-as-seen-from.jpg"
+                    }
+
+                },
+                new Place
+                {
+                    Id = Guid.Parse("b4260314-05c3-4a74-9a9e-a8b2e8e8c629"),
+                    Name ="Chalice Well",
+                    ShortDescription ="A well situated at the foot of Glastonbury Tor in the county of Somerset",
+                    LongDescription ="Wells Cathedral is a combined bascule and suspension bridge in London, built between 1886 and 1894. The bridge crosses the River Thames close to the Tower of London and has become an iconic symbol of London. As a result, it is sometimes confused with London Bridge, about half a mile (0.8 km) upstream. Tower Bridge is one of five London bridges owned and maintained by the Bridge House Estates, a charitable trust overseen by the City of London Corporation. It is the only one of the trust's bridges not to connect the City of London directly to the Southwark bank, as its northern landfall is in Tower Hamlets.",
+                    Image = new Image
+                    {
+                        Id = Guid.Parse("cdcabc4e-545a-4b23-b10e-75152ce7e96b"),
+                        Url = "https://i.ibb.co/XCrXLt1/dsc-0275-largejpg.jpg"
+                    }
+
+                },
+                new Place
+                {
+                    Id = Guid.Parse("2e319f11-512e-49c4-818d-45d0914074f7"),
+                    Name ="Chambercombe Manor",
+                    ShortDescription ="Coleton Fishacre is a property consisting of a garden and a house in...",
+                    LongDescription ="Wells Cathedral is a combined bascule and suspension bridge in London, built between 1886 and 1894. The bridge crosses the River Thames close to the Tower of London and has become an iconic symbol of London. As a result, it is sometimes confused with London Bridge, about half a mile (0.8 km) upstream. Tower Bridge is one of five London bridges owned and maintained by the Bridge House Estates, a charitable trust overseen by the City of London Corporation. It is the only one of the trust's bridges not to connect the City of London directly to the Southwark bank, as its northern landfall is in Tower Hamlets.",
+                    Image = new Image
+                    {
+                        Id = Guid.Parse("e2c60e90-9ad4-44ad-a476-a4c1c39d653b"),
+                        Url = "https://i.ibb.co/GTMg8Hs/chambercombe-manor-complex.jpg"
+                    }
+
+                },
             };
 
             if (!dbContext.Places.Any())
@@ -123,10 +175,11 @@ namespace Core.Database
 
                     },
                     Rating = Enums.Rating.Rate_3,
-                    ReviewedOn = new DateTime(2019,10,12),
+                    ReviewedOn = new DateTime(2020,11,12),
                     PlaceId = Guid.Parse("94EAB6AD-8062-4CE2-A982-3CA495652363"),
-                    ReviewerId = Guid.Parse("4C6E72B2-87DC-4CDC-A855-A72498DC067B")
-                },new Review
+                    ReviewerId = Guid.Parse("4C6E72B2-87DC-4CDC-A855-A72498DC067B"),
+                },
+                new Review
                 {
                     Id = Guid.Parse("04536519-6BC2-4057-B888-849F131BC58D"),
                     Title="Will visit again !!!",
@@ -138,11 +191,10 @@ namespace Core.Database
 
                     },
                     Rating = Enums.Rating.Rate_3,
-                    ReviewedOn = new DateTime(2019,10,12),
+                    ReviewedOn = new DateTime(2020,11,12),
                     PlaceId = Guid.Parse("94EAB6AD-8062-4CE2-A982-3CA495652363"),
-                    ReviewerId = Guid.Parse("65444AF4-841A-4B73-BE7F-C49CB7069C4B")
+                    ReviewerId = Guid.Parse("65444AF4-841A-4B73-BE7F-C49CB7069C4B"),
                 },
-
                 new Review
                 {
                     Id = Guid.Parse("F8B09215-71C6-46B1-8C8A-ACC7AEC8B207"),
@@ -151,11 +203,11 @@ namespace Core.Database
                     Image = new Image
                     {
                         Id = Guid.NewGuid(),
-                        Url = "http://mywowo.net/media/images/cache/londra_houses_of_parliament_02_westminster_big_ben_jpg_1200_630_cover_85.jpg"
+                        Url = "https://i.ibb.co/RCHnShQ/arno-smit-i-I72r3g-Sw-WY-unsplash.jpg"
 
                     },
                     Rating = Enums.Rating.Rate_3,
-                    ReviewedOn = new DateTime(2019,10,12),
+                    ReviewedOn = new DateTime(2020,12,25),
                     PlaceId = Guid.Parse("D4A1AFB0-1968-41FD-9646-AEFFCB21E736"),
                     ReviewerId = Guid.Parse("4C6E72B2-87DC-4CDC-A855-A72498DC067B")
                 },new Review
@@ -166,19 +218,91 @@ namespace Core.Database
                     Image = new Image
                     {
                         Id = Guid.NewGuid(),
-                        Url = "http://lp-cms-production.imgix.net/news/2017/08/London.jpg"
+                        Url = "https://i.ibb.co/yqWQBTW/mathis-jrdl-o7-Be-B6-LE04-E-unsplash.jpg"
 
                     },
                     Rating = Enums.Rating.Rate_3,
-                    ReviewedOn = new DateTime(2019,10,12),
+                    ReviewedOn = new DateTime(2020,12,29),
                     PlaceId = Guid.Parse("D4A1AFB0-1968-41FD-9646-AEFFCB21E736"),
                     ReviewerId = Guid.Parse("65444AF4-841A-4B73-BE7F-C49CB7069C4B")
+                },
+                new Review
+                {
+                    Id = Guid.Parse("e60ac3b6-f63d-43e5-8b68-8f88635f6e49"),
+                    Title="Beautiful Place!!!",
+                    Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    Image = new Image
+                    {
+                        Id = Guid.NewGuid(),
+                        Url = "https://i.ibb.co/D7rVnf1/marta-bibi-N-l-K5xh-XIug-unsplash.jpg"
+
+                    },
+                    Rating = Enums.Rating.Rate_4,
+                    ReviewedOn = new DateTime(2020,11,12),
+                    PlaceId = Guid.Parse("D4A1AFB0-1968-41FD-9646-AEFFCB21E736"),
+                    ReviewerId = Guid.Parse("4C6E72B2-87DC-4CDC-A855-A72498DC067B"),
+                },
+                new Review
+                {
+                    Id = Guid.Parse("622a053f-d3ab-4165-b60e-26bc32dffdf1"),
+                    Title="Nice and quite place !!!",
+                    Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                    Image = new Image
+                    {
+                        Id = Guid.NewGuid(),
+                        Url = "https://i.ibb.co/Z8SZLYD/ignacio-correia-1-yycyo-MT6g-unsplash.jpg"
+
+                    },
+                    Rating = Enums.Rating.Rate_5,
+                    ReviewedOn = new DateTime(2020,11,12),
+                    PlaceId = Guid.Parse("D4A1AFB0-1968-41FD-9646-AEFFCB21E736"),
+                    ReviewerId = Guid.Parse("65444AF4-841A-4B73-BE7F-C49CB7069C4B"),
                 },
             };
 
             if (!dbContext.Reviews.Any())
             {
                 dbContext.Reviews.AddRange(reviews);
+                dbContext.SaveChanges();
+            }
+
+            List<Question> qsList = new List<Question>
+            {
+                new Question
+                {
+                    Id = Guid.NewGuid(),
+                    PlaceId = Guid.Parse("D4A1AFB0-1968-41FD-9646-AEFFCB21E736"),
+                    OwnerId = Guid.Parse("65444AF4-841A-4B73-BE7F-C49CB7069C4B"),
+                    QuestionBody = "Is it a good place to visit with children?",
+                    CreatedOn = new DateTime(2020, 10, 15),
+                    Answers = new List<Answer> {},
+                    Likes = new List<QuestionLikes> {}
+                },
+                new Question
+                {
+                    Id = Guid.NewGuid(),
+                    PlaceId = Guid.Parse("D4A1AFB0-1968-41FD-9646-AEFFCB21E736"),
+                    OwnerId = Guid.Parse("4C6E72B2-87DC-4CDC-A855-A72498DC067B"),
+                    QuestionBody = "How much is the ticket for entrance?",
+                    CreatedOn = new DateTime(2020, 11, 23),
+                    Answers = new List<Answer> {},
+                    Likes = new List<QuestionLikes> {}
+                },
+                new Question
+                {
+                    Id = Guid.NewGuid(),
+                    PlaceId = Guid.Parse("D4A1AFB0-1968-41FD-9646-AEFFCB21E736"),
+                    OwnerId = Guid.Parse("4C6E72B2-87DC-4CDC-A855-A72498DC067B"),
+                    QuestionBody = "At what time is it opening?",
+                    CreatedOn = new DateTime(2020, 12, 28),
+                    Answers = new List<Answer> {},
+                    Likes = new List<QuestionLikes> {}
+                }
+            };
+
+            if (!dbContext.Questions.Any())
+            {
+                dbContext.Questions.AddRange(qsList);
                 dbContext.SaveChanges();
             }
 
@@ -382,7 +506,7 @@ namespace Core.Database
                 new Quiz
                 {
                     Id=Guid.Parse("f2a7051e-f91d-4efb-8bee-c26b474a80a0"),
-                    PlaceId = Guid.Parse("94EAB6AD-8062-4CE2-A982-3CA495652363"),
+                    PlaceId = Guid.Parse("D4A1AFB0-1968-41FD-9646-AEFFCB21E736"),
                 },
                 
             };
@@ -410,6 +534,40 @@ namespace Core.Database
                             QuizId = Guid.Parse("f2a7051e-f91d-4efb-8bee-c26b474a80a0"),
                             AnswerOptions = "Middlesex, Somerset, Devon, Sussex",
                             CorrectAnswer = "Devon"
+
+                        },
+                         new QuizQuestion
+                        {
+                            Id = Guid.NewGuid(),
+                            Title = "Who owns Coleton Fishacre?",
+                            Time = 10,
+                            Points = 10,
+                            QuizId = Guid.Parse("f2a7051e-f91d-4efb-8bee-c26b474a80a0"),
+                            AnswerOptions = "Heritage Trust Network, The Landmark Trust, The Vivat Trust, National Trust",
+                            CorrectAnswer = "National Trust"
+
+
+                        },
+                         new QuizQuestion
+                        {
+                            Id = Guid.NewGuid(),
+                            Title = "Which of the following can be seen around Coleton Fishacre?",
+                            Time = 10,
+                            Points = 10,
+                            QuizId = Guid.Parse("f2a7051e-f91d-4efb-8bee-c26b474a80a0"),
+                            AnswerOptions = "River, Sea, Pond, Forest",
+                            CorrectAnswer = "Sea"
+
+                        },
+                         new QuizQuestion
+                        {
+                            Id = Guid.NewGuid(),
+                            Title = "Coleton Fishacre is a property consisting of a garden and a house in the Arts and Crafts style?",
+                            Time = 15,
+                            Points = 10,
+                            QuizId = Guid.Parse("f2a7051e-f91d-4efb-8bee-c26b474a80a0"),
+                            AnswerOptions = "True, False, Not Aware",
+                            CorrectAnswer = "True"
 
                         }
                     };

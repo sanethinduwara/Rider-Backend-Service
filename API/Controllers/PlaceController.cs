@@ -43,9 +43,11 @@ namespace API.Controllers
                 Description = place.LongDescription,
                 Liked = dbContext.Favourits?.Any(f => f.PlaceId == placeId && f.UserId == userId) ?? false,
                 Rating = Calculate(dbContext.Reviews.Where(r => r.PlaceId == place.Id).ToList()),
+                Visited = dbContext.Visits?.Any(f => f.PlaceId == placeId && f.UserId == userId) ?? false,
             };
 
-            var images = await dbContext.Reviews.Include(r => r.Image).Where(r => r.PlaceId == placeId).Select(e => e.Image.Url).ToListAsync();
+            var images = await dbContext.Reviews.Include(r => r.Image).Where(r => r.PlaceId == placeId)
+                .Select(e => e.Image.Url).ToListAsync();
 
             PlaceDto.Images = images;
 
@@ -168,6 +170,29 @@ namespace API.Controllers
             catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError,ex.Message);
+            }
+        }
+
+        [HttpPost("{placeId}/visit/{userId}")]
+        public async Task<IActionResult> updateVisit([FromRoute] Guid placeId, [FromRoute] Guid userId)
+        {
+            if (placeId == Guid.Empty && userId == Guid.Empty)
+            {
+                return BadRequest("Invalid data");
+            }
+
+            try
+            {
+                var visited = await dbContext.Visits.FirstOrDefaultAsync(f => f.PlaceId == placeId && f.UserId == userId);
+                if (visited == null)
+                {
+                    dbContext.Visits.Add(new VisitedPlace { PlaceId = placeId, UserId = userId });
+                    dbContext.SaveChanges();                }
+                return Json(true);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
 

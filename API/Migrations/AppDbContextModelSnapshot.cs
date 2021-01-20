@@ -404,6 +404,27 @@ namespace API.Migrations
                     b.ToTable("Stations");
                 });
 
+            modelBuilder.Entity("Core.Entities.VisitedPlace", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("PlaceId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PlaceId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Visits");
+                });
+
             modelBuilder.Entity("Core.Entities.Answer", b =>
                 {
                     b.HasOne("Core.Entities.Question", "Question")
@@ -569,6 +590,21 @@ namespace API.Migrations
                     b.HasOne("Core.Entities.Review", "Review")
                         .WithMany("Likes")
                         .HasForeignKey("ReviewId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Core.Entities.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Core.Entities.VisitedPlace", b =>
+                {
+                    b.HasOne("Core.Entities.Place", "Place")
+                        .WithMany()
+                        .HasForeignKey("PlaceId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

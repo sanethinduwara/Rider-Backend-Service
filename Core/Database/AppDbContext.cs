@@ -32,6 +32,8 @@ namespace Core.Database
         public DbSet<Comment> Comments { get; set; }
         public DbSet<CommentLike> CommentLikes { get; set; }
 
+        public DbSet<VisitedPlace> Visits { get; set; }
+
 
         public DbSet<Quiz> Quizzes { get; set; }
         public DbSet<QuizQuestion> QuizQuestions { get; set; }

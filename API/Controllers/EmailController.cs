@@ -9,6 +9,8 @@ using Microsoft.EntityFrameworkCore;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 
+
+
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace API.Controllers
@@ -26,6 +28,7 @@ namespace API.Controllers
         [HttpGet("{userId}")]
         public async Task<IActionResult> emailFavourits ([FromRoute] Guid userId)
         {
+            
             var user = await dbContext.Users.FirstOrDefaultAsync(u => u.Id == userId);
             if (user == null)
             {
@@ -192,21 +195,24 @@ namespace API.Controllers
 
             foreach(var favourite in favourits)
             {
-                cardsContent += $"<div class=\"places-container\"><div class=\"card place-card\">\r\n                <div class=\"place-image-container\" style=\"background-image: url({favourite.Image.Url})\"></div>\r\n                <div class=\"place-details\">\r\n                    <div>\r\n                        <div class=\"place-header-container\">\r\n                            <strong class=\"place-header-text\">{favourite.Name}</strong>\r\n                            <div class=\"header-action\" style=\"color: orange;\">\r\n                                <i class=\"zmdi zmdi-star\"></i>\r\n                                <i class=\"zmdi zmdi-star\"></i> \r\n                                <i class=\"zmdi zmdi-star\"></i>\r\n                                <i class=\"zmdi zmdi-star-outline\"></i>\r\n                                <i class=\"zmdi zmdi-star-outline\"></i>\r\n                            </div>\r\n                        </div>\r\n                        <div>\r\n                            <p>{favourite.ShortDescription} </p>\r\n                        </div>\r\n                        <div style=\"float: right;color: red;padding: 0 15px;\">\r\n                            <div class=\"footer-action\"> <i class=\"fas fa-trash\"></i></div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div></div>";
+                cardsContent += $"<div class=\"places-container\"><div class=\"card place-card\">\r\n<div class=\"place-image-container\" style=\"background-image: url({favourite.Image.Url});width: 110px;height: 110px;background-position: center center;background-repeat: no-repeat;background-size: cover;\"></div>\r\n                <div class=\"place-details\">\r\n                    <div>\r\n                        <div class=\"place-header-container\">\r\n                            <strong class=\"place-header-text\">{favourite.Name}</strong>\r\n                            <div class=\"header-action\" style=\"color: orange;\">\r\n                                <i class=\"zmdi zmdi-star\"></i>\r\n                                <i class=\"zmdi zmdi-star\"></i> \r\n                                <i class=\"zmdi zmdi-star\"></i>\r\n                                <i class=\"zmdi zmdi-star-outline\"></i>\r\n                                <i class=\"zmdi zmdi-star-outline\"></i>\r\n                            </div>\r\n                        </div>\r\n                        <div>\r\n                            <p>{favourite.ShortDescription} </p>\r\n                        </div>\r\n                        <div style=\"float: right;color: red;padding: 0 15px;\">\r\n                            <div class=\"footer-action\"> <i class=\"fas fa-trash\"></i></div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div></div>";
             }
 
-            string subject = "Favourits";
+            string subject = "Favourites";
             string plainTextContent = "something";
             string htmlContent = cardsContent;
 
-            var apiKey = "SG.WAkTyKbSTD-vvP-pFK7vLg.Ovc9BpBQa7u3a1j-IgDeOvK36Wg3T9rNPVSK3IPy768";
+            
+            var apiKey = "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";
+            
             var client = new SendGridClient(apiKey);
-            var from = new EmailAddress("test@example.com", "No Reply");
+            var from = new EmailAddress("sadesh.2017395@iit.ac.lk", "Rider");
             var to = new EmailAddress(user.Email, user.UserName);
             var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
             var response = await client.SendEmailAsync(msg);
-
             return Json(true);
         }
+
+
     }
 }

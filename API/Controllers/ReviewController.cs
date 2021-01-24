@@ -118,7 +118,7 @@ namespace API.Controllers
                 }
 
                 dbContext.SaveChanges();
-                //res.Count = dbContext.ReviewLikes.Count(r => r.ReviewId == reviewId);
+                res.Count = dbContext.ReviewLikes.Count(r => r.ReviewId == reviewId);
 
                 return Json(res);
 

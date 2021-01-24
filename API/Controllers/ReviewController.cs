@@ -246,7 +246,7 @@ namespace API.Controllers
                 }
 
                 dbContext.SaveChanges();
-                //res.Count = dbContext.CommentLikes.Count(c => c.CommentId == commentId);
+                res.Count = dbContext.CommentLikes.Count(c => c.CommentId == commentId);
 
                 return Json(res);
             }
